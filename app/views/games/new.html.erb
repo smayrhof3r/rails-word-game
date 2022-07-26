@@ -14,9 +14,9 @@
   </div>
   <div class="container text-center justify-content-center">
     <form id = "form" action="/score" method = "POST" class = "m-3 justify-content-center" data-turbo="false">
-      <input type="text" class="form-control mb-3 text-center" data-games-target="word" data-action="keydown->games#keyboardEntry" id="word" placeholder="Let's go!" value = "" name = "word">
+      <input type="text" class="form-control mb-3 text-center" data-games-target="word" data-action="keydown->games#keyboardEntry" id="word" placeholder="Let's go!" value = "" name = "word" autofocus>
       <input type="text" id = "score" name = "score" value = "" data-games-target="score" hidden>
-      <button type="submit" id = "btnsubmit" class="btn btn-primary" data-games-target="formbutton" disabled autofocus>Lock it in!</button>
+      <button type="submit" id = "btnsubmit" class="btn btn-primary" data-games-target="formbutton" disabled autofocus autocomplete="off">Lock it in!</button>
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     </form>
   </div>

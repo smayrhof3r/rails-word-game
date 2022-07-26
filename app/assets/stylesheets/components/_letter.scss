@@ -1,0 +1,32 @@
+.used {
+  background-color: transparent !important;
+  border: 1px solid $gray;
+ }
+
+ .pink {
+    background-color: $pink;
+ }
+
+ .blue {
+    background-color: $blue;
+ }
+
+ .yellow {
+    background-color: $yellow;
+ }
+
+ .letter {
+  margin: 8px;
+  width: 12vw;
+  max-width: 120px;
+  height:40px;
+  border: none;
+  box-shadow: 2px 2px 5px $shadow;
+  font-size: x-large;
+ }
+
+ .letters-box {
+  width: 80vw;
+  max-width: 800px;
+  margin: auto;
+ }
