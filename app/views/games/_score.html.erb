@@ -1,0 +1,12 @@
+<div class="scores col-12 col-sm-4 border border-left">
+  <h2 class = "text-center">Scores</h2>
+  <h3 class = "text-center border-bottom text-dark bg-info">Total: <%= @scores.sum %></h3>
+  <% @words.each_with_index do |word, i| %>
+    <div class="row">
+      <div class="scores d-flex flex-row">
+        <div class = "w-50 text-center text-dark"><%= word %></div>
+        <div class = "w-50 text-center text-dark"><%= @scores[i] %></div>
+      </div>
+    </div>
+  <% end %>
+</div>

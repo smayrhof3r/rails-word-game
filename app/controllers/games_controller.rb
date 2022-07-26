@@ -2,6 +2,8 @@ class GamesController < ApplicationController
   def new
     session[:scores] ||= [];
     session[:words] ||= [];
+    @scores = session[:scores]
+    @words = session[:words]
     @letters = alphabet_sample
     @colors = (['pink', 'blue', 'yellow'] * 4).flatten
   end
@@ -10,8 +12,7 @@ class GamesController < ApplicationController
     @params = params
     session[:scores].push(params["word"].length)
     session[:words].push(params["word"])
-    @scores = session[:scores]
-    @words = session[:words]
+    redirect_to :new
   end
 
   private
